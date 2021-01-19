@@ -6,7 +6,7 @@ COPY go.mod .
 RUN go mod download
 
 ARG GOOS=linux
-ARG GOARCH=amd64
+ARG GOARCH=arm64
 COPY . .
 RUN go build -ldflags="-w -s"
 
